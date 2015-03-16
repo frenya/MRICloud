@@ -1,0 +1,8 @@
+# Xcode
+.DS_Store
+xcdebugger
+xcuserdata
+
+# Pods - for those of you who use CocoaPods
+Pods
+

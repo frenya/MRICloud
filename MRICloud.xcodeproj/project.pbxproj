@@ -16,6 +16,7 @@
 		30CF462B1AB6D7AC00E0A4C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CF462A1AB6D7AC00E0A4C9 /* Images.xcassets */; };
 		30CF462E1AB6D7AC00E0A4C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30CF462C1AB6D7AC00E0A4C9 /* LaunchScreen.xib */; };
 		30CF463A1AB6D7AC00E0A4C9 /* MRICloudTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CF46391AB6D7AC00E0A4C9 /* MRICloudTests.m */; };
+		30CF48551AB6E15B00E0A4C9 /* libMagicalRecord-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30CF482B1AB6DA4100E0A4C9 /* libMagicalRecord-iOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +26,48 @@
 			proxyType = 1;
 			remoteGlobalIDString = 30CF46131AB6D7AB00E0A4C9;
 			remoteInfo = MRICloud;
+		};
+		30CF48261AB6DA4100E0A4C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30CF481C1AB6DA4100E0A4C9 /* MagicalRecord.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 905D07181A63DE190076B54E;
+			remoteInfo = "MagicalRecord-iOS";
+		};
+		30CF48281AB6DA4100E0A4C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30CF481C1AB6DA4100E0A4C9 /* MagicalRecord.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 905D073B1A63DE690076B54E;
+			remoteInfo = "MagicalRecord-OSX";
+		};
+		30CF482A1AB6DA4100E0A4C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30CF481C1AB6DA4100E0A4C9 /* MagicalRecord.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C7CF97AB17498414008D9D13;
+			remoteInfo = "libMagicalRecord-iOS";
+		};
+		30CF482C1AB6DA4100E0A4C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30CF481C1AB6DA4100E0A4C9 /* MagicalRecord.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C7CF97BB1749843F008D9D13;
+			remoteInfo = "libMagicalRecord-OSX";
+		};
+		30CF482E1AB6DA4100E0A4C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30CF481C1AB6DA4100E0A4C9 /* MagicalRecord.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C7CF97FF174984CA008D9D13;
+			remoteInfo = "MagicalRecordTests-iOS";
+		};
+		30CF48301AB6DA4100E0A4C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30CF481C1AB6DA4100E0A4C9 /* MagicalRecord.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C7CF9816174984E4008D9D13;
+			remoteInfo = "MagicalRecordTests-OSX";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -45,6 +88,7 @@
 		30CF46331AB6D7AC00E0A4C9 /* MRICloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MRICloudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30CF46381AB6D7AC00E0A4C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30CF46391AB6D7AC00E0A4C9 /* MRICloudTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRICloudTests.m; sourceTree = "<group>"; };
+		30CF481C1AB6DA4100E0A4C9 /* MagicalRecord.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MagicalRecord.xcodeproj; path = vendor/MagicalRecord/MagicalRecord.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30CF48551AB6E15B00E0A4C9 /* libMagicalRecord-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +113,7 @@
 		30CF460B1AB6D7AB00E0A4C9 = {
 			isa = PBXGroup;
 			children = (
+				30CF481C1AB6DA4100E0A4C9 /* MagicalRecord.xcodeproj */,
 				30CF46161AB6D7AC00E0A4C9 /* MRICloud */,
 				30CF46361AB6D7AC00E0A4C9 /* MRICloudTests */,
 				30CF46151AB6D7AC00E0A4C9 /* Products */,
@@ -125,6 +171,19 @@
 				30CF46381AB6D7AC00E0A4C9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		30CF481D1AB6DA4100E0A4C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30CF48271AB6DA4100E0A4C9 /* MagicalRecord.framework */,
+				30CF48291AB6DA4100E0A4C9 /* MagicalRecord.framework */,
+				30CF482B1AB6DA4100E0A4C9 /* libMagicalRecord-iOS.a */,
+				30CF482D1AB6DA4100E0A4C9 /* libMagicalRecord-OSX.dylib */,
+				30CF482F1AB6DA4100E0A4C9 /* MagicalRecordTests-iOS.xctest */,
+				30CF48311AB6DA4100E0A4C9 /* MagicalRecordTests-OSX.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +253,12 @@
 			mainGroup = 30CF460B1AB6D7AB00E0A4C9;
 			productRefGroup = 30CF46151AB6D7AC00E0A4C9 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 30CF481D1AB6DA4100E0A4C9 /* Products */;
+					ProjectRef = 30CF481C1AB6DA4100E0A4C9 /* MagicalRecord.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				30CF46131AB6D7AB00E0A4C9 /* MRICloud */,
@@ -201,6 +266,51 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		30CF48271AB6DA4100E0A4C9 /* MagicalRecord.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MagicalRecord.framework;
+			remoteRef = 30CF48261AB6DA4100E0A4C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		30CF48291AB6DA4100E0A4C9 /* MagicalRecord.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MagicalRecord.framework;
+			remoteRef = 30CF48281AB6DA4100E0A4C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		30CF482B1AB6DA4100E0A4C9 /* libMagicalRecord-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libMagicalRecord-iOS.a";
+			remoteRef = 30CF482A1AB6DA4100E0A4C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		30CF482D1AB6DA4100E0A4C9 /* libMagicalRecord-OSX.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = "libMagicalRecord-OSX.dylib";
+			remoteRef = 30CF482C1AB6DA4100E0A4C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		30CF482F1AB6DA4100E0A4C9 /* MagicalRecordTests-iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "MagicalRecordTests-iOS.xctest";
+			remoteRef = 30CF482E1AB6DA4100E0A4C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		30CF48311AB6DA4100E0A4C9 /* MagicalRecordTests-OSX.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "MagicalRecordTests-OSX.xctest";
+			remoteRef = 30CF48301AB6DA4100E0A4C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		30CF46121AB6D7AB00E0A4C9 /* Resources */ = {
@@ -355,8 +465,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/vendor/MagicalRecord/MagicalRecord/**",
+				);
 				INFOPLIST_FILE = MRICloud/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -365,8 +484,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/vendor/MagicalRecord/MagicalRecord/**",
+				);
 				INFOPLIST_FILE = MRICloud/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
