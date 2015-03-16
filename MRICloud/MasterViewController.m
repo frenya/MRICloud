@@ -33,6 +33,10 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+
+    // observer for store changes (perhaps in viewDidLoad)
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(reloadData:) name:kMagicalRecordPSCDidCompleteiCloudSetupNotification object:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,6 +55,13 @@
         
     // Save the context.
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+    
+}
+
+- (void)reloadData:(NSNotification *)notification {
+    
+    self.fetchedResultsController = nil;
+    [self.tableView reloadData];
     
 }
 
@@ -75,6 +86,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
+    self.navigationItem.title = [NSString stringWithFormat:@"%i events", [sectionInfo numberOfObjects]];
     return [sectionInfo numberOfObjects];
 }
 

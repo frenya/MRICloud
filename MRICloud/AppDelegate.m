@@ -21,9 +21,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    NSLog(@"Application support directories:\n%@", NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES));
+    
     // Init core data stack
     [MagicalRecord setLoggingLevel:MagicalRecordLoggingLevelVerbose];
-    [self iCloudCoreDataSetup];
+    
+    if ([[NSFileManager defaultManager] ubiquityIdentityToken]) {
+        [self iCloudCoreDataSetup];
+    }
+    else {
+        NSLog(@"iCloud not enabled");
+        [MagicalRecord setupAutoMigratingCoreDataStack];
+    }
     
     // Override point for customization after application launch.
     UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
@@ -112,7 +121,7 @@
     // Refer to Apple's documentation for further details
     [[NSNotificationCenter defaultCenter] addObserverForName:NSPersistentStoreCoordinatorStoresWillChangeNotification
                                                       object:[NSPersistentStoreCoordinator MR_defaultStoreCoordinator]
-     // queue:nil    // Run on the posting (i.e. background) thread
+                                                    // queue:nil    // Run on the posting (i.e. background) thread
                                                        queue:[NSOperationQueue mainQueue]   // Run on the main thread
                                                   usingBlock:^(NSNotification *note) {
                                                       // For debugging only
