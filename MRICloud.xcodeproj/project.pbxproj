@@ -89,6 +89,7 @@
 		30CF46381AB6D7AC00E0A4C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30CF46391AB6D7AC00E0A4C9 /* MRICloudTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRICloudTests.m; sourceTree = "<group>"; };
 		30CF481C1AB6DA4100E0A4C9 /* MagicalRecord.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MagicalRecord.xcodeproj; path = vendor/MagicalRecord/MagicalRecord.xcodeproj; sourceTree = "<group>"; };
+		30CF48561AB6E3D700E0A4C9 /* MRICloud.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MRICloud.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +133,7 @@
 		30CF46161AB6D7AC00E0A4C9 /* MRICloud */ = {
 			isa = PBXGroup;
 			children = (
+				30CF48561AB6E3D700E0A4C9 /* MRICloud.entitlements */,
 				30CF461B1AB6D7AC00E0A4C9 /* AppDelegate.h */,
 				30CF461C1AB6D7AC00E0A4C9 /* AppDelegate.m */,
 				30CF46211AB6D7AC00E0A4C9 /* MasterViewController.h */,
@@ -465,6 +467,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MRICloud/MRICloud.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -477,6 +482,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -484,6 +490,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MRICloud/MRICloud.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -496,6 +505,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
