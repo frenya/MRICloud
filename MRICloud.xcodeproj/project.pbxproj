@@ -562,6 +562,7 @@
 				30CF463F1AB6D7AC00E0A4C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30CF46401AB6D7AC00E0A4C9 /* Build configuration list for PBXNativeTarget "MRICloudTests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +571,7 @@
 				30CF46421AB6D7AC00E0A4C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
